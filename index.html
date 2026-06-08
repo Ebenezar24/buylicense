@@ -1,307 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BuyLicense — Genuine Software License Keys</title>
-  <meta name="description" content="Buy genuine Windows, Office, and Antivirus license keys at the best prices. Instant delivery, lifetime validity." />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔑</text></svg>" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>BuyLicense — Best Selling Software Licenses & Genuine Microsoft Keys</title>
+<meta name="description" content="Get best selling software licenses with genuine Microsoft Office, Windows, and Microsoft 365 keys. Trusted seller, instant delivery."/>
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔑</text></svg>"/>
 </head>
 <body>
 
-<!-- ─── NAV ─────────────────────────────────────────────────────────── -->
-<nav>
-  <a href="#" class="nav-logo" data-page="home">Buy<span>License</span></a>
-  <div class="nav-links">
-    <a href="#" data-page="home">Home</a>
-    <a href="#" data-page="products">Products</a>
-    <a href="#" data-page="about">About</a>
-    <a href="#" data-page="contact">Contact</a>
-    <a href="#" class="nav-cta" data-page="products">Browse Keys →</a>
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>📧 <a href="mailto:sales@buy-license.com">sales@buy-license.com</a></span>
+    <span>🕐 Mon–Sat: 9AM–9PM &nbsp;|&nbsp; WhatsApp: 24/7</span>
   </div>
-  <div class="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo" data-page="home">
+      <div class="logo-text">Buy<span>License</span></div>
+    </a>
+    <div class="header-search">
+      <div class="search-wrap">
+        <select>
+          <option>All Categories</option>
+          <option>Microsoft 365</option>
+          <option>Office 365</option>
+          <option>Windows 365</option>
+          <option>MS Office</option>
+          <option>Windows Server</option>
+        </select>
+        <input type="text" id="search-input" placeholder="Search for software licenses…"/>
+        <button id="search-btn">🔍</button>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="header-contact">
+        <strong>📞 +91 72596 71242</strong>
+        <span>WhatsApp Support 24/7</span>
+      </div>
+      <button class="cart-btn" id="cart-btn">
+        🛒 Cart <span class="cart-count">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN NAV -->
+<nav class="main-nav">
+  <div class="nav-inner container">
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul>
+      <li><a href="#" data-page="home">Home</a></li>
+      <li><a href="#" data-page="about">About Us</a></li>
+      <li class="has-dropdown">
+        <a href="#" data-page="products">Products</a>
+        <ul class="dropdown">
+          <li class="has-dropdown"><a href="#" class="has-sub" data-page="products">Microsoft SaaS Products</a>
+            <ul class="sub-dropdown">
+              <li><a href="#" data-page="products">Office 365</a></li>
+              <li><a href="#" data-page="products">Microsoft 365 Business Plans</a></li>
+              <li><a href="#" data-page="products">Microsoft 365 Enterprise Plans</a></li>
+              <li><a href="#" data-page="products">Windows 365 Plans</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown"><a href="#" class="has-sub" data-page="products">Microsoft Perpetual License</a>
+            <ul class="sub-dropdown">
+              <li><a href="#" data-page="products">Microsoft Office & Applications</a></li>
+              <li><a href="#" data-page="products">Windows Server</a></li>
+              <li><a href="#" data-page="products">Exchange Server</a></li>
+              <li><a href="#" data-page="products">SQL Server</a></li>
+              <li><a href="#" data-page="products">SharePoint Server</a></li>
+              <li><a href="#" data-page="products">Client Access Licences</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#" data-page="usecases">Use Cases</a></li>
+      <li><a href="#" data-page="contact">Contact Us</a></li>
+    </ul>
   </div>
 </nav>
 
-<!-- ─── PAGE: HOME ───────────────────────────────────────────────────── -->
+<!-- ── PAGE: HOME ──────────────────────────────────────────────────────── -->
 <div id="page-home" class="page">
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-inner">
-      <div class="hero-badge">Trusted by 10,000+ customers across India</div>
-      <h1>Genuine Software<br>Keys at <em>Best Prices</em></h1>
-      <p class="hero-sub">Windows, Microsoft Office, Antivirus — all 100% genuine, lifetime valid license keys. Instant delivery after payment.</p>
-      <div class="hero-btns">
-        <a href="#" class="btn-primary" data-page="products">Shop License Keys →</a>
-        <a href="#" class="btn-secondary" data-page="contact">💬 Talk to Us</a>
+  <!-- HERO -->
+  <div class="hero-fallback">
+    <h1>Proven Partner in Software Licensing</h1>
+    <p>Genuine Microsoft Office, Windows, and Server license keys — TÜV-certified, audit-proof, and fully compliant for business use. Always in Stock, Ready to Ship.</p>
+    <a href="#" class="hero-cta" data-page="products">Shop License Keys →</a>
+  </div>
+
+  <!-- MARQUEE -->
+  <div class="marquee-bar">
+    <div class="marquee-inner">
+      <span class="marquee-item">Office 2024 Standard LTSC</span>
+      <span class="marquee-item">Microsoft 365 Business Premium</span>
+      <span class="marquee-item">Windows Server 2022 Datacenter</span>
+      <span class="marquee-item">Office 365 E5</span>
+      <span class="marquee-item">Windows 365 Enterprise</span>
+      <span class="marquee-item">SQL Server 2022 Enterprise</span>
+      <span class="marquee-item">Exchange Server 2019</span>
+      <span class="marquee-item">SharePoint Server 2019</span>
+    </div>
+  </div>
+
+  <!-- HOT DEALS -->
+  <section class="products-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Shop the Hottest Deals on Microsoft Licenses</h2>
+        <p>Genuine keys, instant delivery, best prices guaranteed</p>
       </div>
-      <div class="hero-stats">
-        <div>
-          <div class="hero-stat-num">10K+</div>
-          <div class="hero-stat-label">Happy Customers</div>
+      <div class="products-grid" id="hot-deals-grid"></div>
+      <div style="text-align:center;margin-top:30px">
+        <a href="#" class="hero-cta" data-page="products" style="display:inline-block">View All Products →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRENDING -->
+  <section style="background:#fff;padding:50px 20px">
+    <div class="container">
+      <div class="section-title">
+        <h2>Trending Products</h2>
+        <p>Most enquired Microsoft licenses this week</p>
+      </div>
+      <div class="products-grid" id="trending-grid"></div>
+    </div>
+  </section>
+
+  <!-- POPULAR TABBED -->
+  <section class="products-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Popular Products</h2>
+      </div>
+      <div class="products-tabs">
+        <div class="tab-btn active" data-cat="all">Top 20</div>
+        <div class="tab-btn" data-cat="w365">Windows 365</div>
+        <div class="tab-btn" data-cat="office">MS Office</div>
+        <div class="tab-btn" data-cat="o365">Office 365</div>
+        <div class="tab-btn" data-cat="m365">Microsoft 365</div>
+        <div class="tab-btn" data-cat="server">Windows Server</div>
+      </div>
+      <div class="products-grid" id="popular-grid"></div>
+    </div>
+  </section>
+
+  <!-- ADVANTAGES -->
+  <section class="advantages">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Key Advantages</h2>
+      </div>
+      <div class="advantages-grid">
+        <div class="advantage-card">
+          <div class="advantage-icon">✅</div>
+          <div class="advantage-title">Guaranteed Availability</div>
+          <div class="advantage-desc">All products are always in stock and ready to ship immediately after order confirmation.</div>
         </div>
-        <div>
-          <div class="hero-stat-num">100%</div>
-          <div class="hero-stat-label">Genuine Keys</div>
+        <div class="advantage-card">
+          <div class="advantage-icon">🔐</div>
+          <div class="advantage-title">100% Original Licenses</div>
+          <div class="advantage-desc">TÜV-certified, audit-proof, and fully compliant Microsoft licenses for personal and business use.</div>
         </div>
-        <div>
-          <div class="hero-stat-num">⚡ 5min</div>
-          <div class="hero-stat-label">Avg Delivery</div>
+        <div class="advantage-card">
+          <div class="advantage-icon">⚡</div>
+          <div class="advantage-title">Fast Delivery</div>
+          <div class="advantage-desc">Digital license keys delivered instantly to your email after payment confirmation.</div>
         </div>
-        <div>
-          <div class="hero-stat-num">24/7</div>
-          <div class="hero-stat-label">WhatsApp Support</div>
+        <div class="advantage-card">
+          <div class="advantage-icon">🛡️</div>
+          <div class="advantage-title">100% Security</div>
+          <div class="advantage-desc">Secure transactions, encrypted delivery, and full replacement warranty on every key.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Us -->
+  <!-- PRODUCT CATEGORIES -->
+  <section style="background:#f9f9f9;padding:50px 20px">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Product Categories</h2>
+        <p>Find the right Microsoft license for your needs</p>
+      </div>
+      <div class="category-grid">
+        <div class="category-card" onclick="showPage('products');setTimeout(()=>{document.querySelector('.cat-btn[data-cat=office]').click()},100)">
+          <div class="category-icon">📄</div>
+          <div class="category-name">MS Office</div>
+          <div class="category-count">2016 · 2019 · 2021 · 2024</div>
+        </div>
+        <div class="category-card" onclick="showPage('products');setTimeout(()=>{document.querySelector('.cat-btn[data-cat=m365]').click()},100)">
+          <div class="category-icon">☁️</div>
+          <div class="category-name">Microsoft 365</div>
+          <div class="category-count">Business & Enterprise Plans</div>
+        </div>
+        <div class="category-card" onclick="showPage('products');setTimeout(()=>{document.querySelector('.cat-btn[data-cat=o365]').click()},100)">
+          <div class="category-icon">🌐</div>
+          <div class="category-name">Office 365</div>
+          <div class="category-count">E1 · E3 · E5 & Business</div>
+        </div>
+        <div class="category-card" onclick="showPage('products');setTimeout(()=>{document.querySelector('.cat-btn[data-cat=w365]').click()},100)">
+          <div class="category-icon">🪟</div>
+          <div class="category-name">Windows 365</div>
+          <div class="category-count">Business · Enterprise · Frontline</div>
+        </div>
+        <div class="category-card" onclick="showPage('products');setTimeout(()=>{document.querySelector('.cat-btn[data-cat=server]').click()},100)">
+          <div class="category-icon">🖥️</div>
+          <div class="category-name">Windows Server</div>
+          <div class="category-count">2019 · 2022 · 2025</div>
+        </div>
+        <div class="category-card" onclick="showPage('products');setTimeout(()=>{document.querySelector('.cat-btn[data-cat=exchange]').click()},100)">
+          <div class="category-icon">📨</div>
+          <div class="category-name">Exchange Server</div>
+          <div class="category-count">2016 · 2019</div>
+        </div>
+        <div class="category-card" onclick="showPage('products');setTimeout(()=>{document.querySelector('.cat-btn[data-cat=sql]').click()},100)">
+          <div class="category-icon">🗃️</div>
+          <div class="category-name">SQL Server</div>
+          <div class="category-count">2019 · 2022</div>
+        </div>
+        <div class="category-card" onclick="showPage('products');setTimeout(()=>{document.querySelector('.cat-btn[data-cat=cal]').click()},100)">
+          <div class="category-icon">🔑</div>
+          <div class="category-name">Client Access Licences</div>
+          <div class="category-count">Windows · Exchange · SharePoint</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ── PAGE: PRODUCTS ──────────────────────────────────────────────────── -->
+<div id="page-products" class="page">
+  <div class="products-page-header">
+    <h1>Microsoft Software Licenses</h1>
+    <p>Genuine keys — Add to cart and enquire via WhatsApp for pricing</p>
+  </div>
   <section>
     <div class="container">
-      <span class="section-tag">Why choose us</span>
-      <h2>Everything you need,<br>nothing you don't</h2>
-      <p class="section-sub">We've been delivering genuine software licenses since 2018 with zero compromise on authenticity.</p>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">🔑</div>
-          <div class="feature-title">100% Genuine Keys</div>
-          <div class="feature-desc">Every key is verified and sourced from official channels. Lifetime validity guaranteed.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <div class="feature-title">Instant Delivery</div>
-          <div class="feature-desc">License key delivered to your email within minutes of payment confirmation.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">💬</div>
-          <div class="feature-title">WhatsApp Support</div>
-          <div class="feature-desc">24/7 support via WhatsApp. Our team helps with activation and any issues.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">💳</div>
-          <div class="feature-title">Secure Payments</div>
-          <div class="feature-desc">Pay via UPI, card, net banking, or wallets through Razorpay — 100% secure.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔄</div>
-          <div class="feature-title">Replacement Warranty</div>
-          <div class="feature-desc">If your key stops working, we replace it. No questions asked.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">💰</div>
-          <div class="feature-title">Best Prices in India</div>
-          <div class="feature-desc">Save up to 90% versus retail pricing. Genuine keys, unbeatable value.</div>
-        </div>
+      <div class="category-filter">
+        <button class="cat-btn active" data-cat="all">All Products</button>
+        <button class="cat-btn" data-cat="office">MS Office</button>
+        <button class="cat-btn" data-cat="outlook">Outlook</button>
+        <button class="cat-btn" data-cat="access">Access</button>
+        <button class="cat-btn" data-cat="m365">Microsoft 365</button>
+        <button class="cat-btn" data-cat="o365">Office 365</button>
+        <button class="cat-btn" data-cat="w365">Windows 365</button>
+        <button class="cat-btn" data-cat="server">Windows Server</button>
+        <button class="cat-btn" data-cat="exchange">Exchange Server</button>
+        <button class="cat-btn" data-cat="sql">SQL Server</button>
+        <button class="cat-btn" data-cat="sharepoint">SharePoint</button>
+        <button class="cat-btn" data-cat="cal">CALs</button>
       </div>
-    </div>
-  </section>
-
-  <!-- Featured Products preview -->
-  <section style="background: var(--bg2);">
-    <div class="container">
-      <span class="section-tag">Top picks</span>
-      <h2>Most popular keys</h2>
-      <p class="section-sub">Our bestselling software licenses trusted by thousands of customers.</p>
-      <div class="products-grid" style="margin-top: 2.5rem;">
-        <div class="product-card">
-          <span class="product-badge">Bestseller</span>
-          <div class="product-icon">🪟</div>
-          <div class="product-name">Windows 11 Pro</div>
-          <div class="product-desc">Genuine lifetime activation key. Instant delivery after payment.</div>
-          <div class="product-price">₹1,299 <span>one-time</span></div>
-          <button class="btn-buy" onclick="openPayment(1)">Buy Now</button>
-        </div>
-        <div class="product-card">
-          <div class="product-icon">📄</div>
-          <div class="product-name">Microsoft Office 2021</div>
-          <div class="product-desc">Full Office suite — Word, Excel, PowerPoint. Lifetime license.</div>
-          <div class="product-price">₹1,999 <span>one-time</span></div>
-          <button class="btn-buy" onclick="openPayment(2)">Buy Now</button>
-        </div>
-        <div class="product-card">
-          <div class="product-icon">🛡️</div>
-          <div class="product-name">Kaspersky Total Security</div>
-          <div class="product-desc">Complete protection for 1 year, 3 devices. Real-time threat defense.</div>
-          <div class="product-price">₹699 <span>/ year</span></div>
-          <button class="btn-buy" onclick="openPayment(5)">Buy Now</button>
-        </div>
-      </div>
-      <div style="text-align:center; margin-top: 2.5rem;">
-        <a href="#" class="btn-secondary" data-page="products" style="display:inline-flex;">View all products →</a>
-      </div>
-    </div>
-  </section>
-
-</div>
-
-<!-- ─── PAGE: PRODUCTS ────────────────────────────────────────────────── -->
-<div id="page-products" class="page">
-  <section style="padding-top: 8rem;">
-    <div class="container">
-      <span class="section-tag">All products</span>
-      <h2>Software License Keys</h2>
-      <p class="section-sub">Genuine keys at the best prices. All come with instant delivery and replacement warranty.</p>
-
-      <!-- Filter -->
-      <div style="display:flex; gap:0.75rem; margin-top:2rem; flex-wrap:wrap;">
-        <button class="filter-btn active-filter" data-filter="all" style="padding:0.5rem 1.25rem; border-radius:100px; border:1px solid var(--border2); background:var(--accent); color:#fff; font-size:0.85rem; cursor:pointer; transition:all 0.2s;">All</button>
-        <button class="filter-btn" data-filter="windows" style="padding:0.5rem 1.25rem; border-radius:100px; border:1px solid var(--border); background:transparent; color:var(--muted); font-size:0.85rem; cursor:pointer; transition:all 0.2s;">🪟 Windows</button>
-        <button class="filter-btn" data-filter="office" style="padding:0.5rem 1.25rem; border-radius:100px; border:1px solid var(--border); background:transparent; color:var(--muted); font-size:0.85rem; cursor:pointer; transition:all 0.2s;">📄 Office</button>
-        <button class="filter-btn" data-filter="antivirus" style="padding:0.5rem 1.25rem; border-radius:100px; border:1px solid var(--border); background:transparent; color:var(--muted); font-size:0.85rem; cursor:pointer; transition:all 0.2s;">🛡️ Antivirus</button>
-      </div>
-
-      <div class="products-grid" id="products-grid" style="margin-top:2rem;"></div>
+      <div class="products-grid" id="all-products-grid"></div>
     </div>
   </section>
 </div>
 
-<!-- ─── PAGE: ABOUT ───────────────────────────────────────────────────── -->
+<!-- ── PAGE: ABOUT ────────────────────────────────────────────────────── -->
 <div id="page-about" class="page">
-  <section id="about" style="padding-top: 8rem;">
+  <div class="about-hero">
+    <h1>About BuyLicense</h1>
+    <p>Your trusted partner for genuine Microsoft software licenses since 2018</p>
+  </div>
+  <div class="about-content">
+    <p>BuyLicense is a trusted reseller of genuine Microsoft software licenses, serving businesses and individuals across India and globally. We specialize in Microsoft Office, Microsoft 365, Windows Server, and all related enterprise software licensing solutions.</p>
+    <p>Our mission is simple — provide 100% genuine, audit-proof Microsoft licenses at the best prices with instant delivery. Every license we sell is TÜV-certified and fully compliant for personal and business use.</p>
+    <p>We work with enterprises, SMBs, educational institutions, and individual users — offering volume licensing, perpetual licenses, and SaaS subscriptions tailored to every need and budget.</p>
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-num">10K+</div><div class="stat-label">Customers Served</div></div>
+      <div class="stat-box"><div class="stat-num">100%</div><div class="stat-label">Genuine Licenses</div></div>
+      <div class="stat-box"><div class="stat-num">6+</div><div class="stat-label">Years in Business</div></div>
+      <div class="stat-box"><div class="stat-num">24/7</div><div class="stat-label">WhatsApp Support</div></div>
+    </div>
+    <p><strong>Our Address:</strong> Resofto Technologies, WeWork Vaishnavi Signature, No. 78/9, Outer Ring Road, Bellandur Village, Varthur Hobli, Bengaluru, Karnataka 560103</p>
+  </div>
+</div>
+
+<!-- ── PAGE: USE CASES ────────────────────────────────────────────────── -->
+<div id="page-usecases" class="page">
+  <div class="about-hero">
+    <h1>Use Cases</h1>
+    <p>Microsoft licensing solutions for every business type and size</p>
+  </div>
+  <section>
     <div class="container">
-      <span class="section-tag">Our story</span>
-      <h2>Built for honest software access</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>BuyLicense was started in 2018 with a simple mission — make genuine software affordable for every Indian. We saw people paying ₹15,000+ for a Windows license or ₹25,000 for Office when they didn't have to.</p>
-          <p>We source license keys through authorised volume licensing channels and pass the savings directly to you. Every key we sell is 100% genuine, tested, and backed by our replacement warranty.</p>
-          <p>Today we serve over 10,000 customers across India — from students and home users to small businesses and IT professionals.</p>
-          <div class="about-highlights">
-            <div class="about-highlight">
-              <div class="about-highlight-icon">🔑</div>
-              <div>
-                <div class="about-highlight-title">Only genuine keys</div>
-                <div class="about-highlight-desc">We never sell cracked or pirated software. Every key activates directly with Microsoft or the publisher.</div>
-              </div>
-            </div>
-            <div class="about-highlight">
-              <div class="about-highlight-icon">🤝</div>
-              <div>
-                <div class="about-highlight-title">Replacement guarantee</div>
-                <div class="about-highlight-desc">If your key ever stops working due to any issue on our end, we replace it — no questions asked.</div>
-              </div>
-            </div>
-            <div class="about-highlight">
-              <div class="about-highlight-icon">🇮🇳</div>
-              <div>
-                <div class="about-highlight-title">India-first pricing</div>
-                <div class="about-highlight-desc">All prices in INR with UPI, card, and wallet support. Made for Indian customers.</div>
-              </div>
-            </div>
-          </div>
+      <div class="advantages-grid">
+        <div class="advantage-card" style="border:1px solid var(--border);border-radius:8px">
+          <div class="advantage-icon">🏢</div>
+          <div class="advantage-title">Enterprise</div>
+          <div class="advantage-desc">Microsoft 365 E3/E5 and volume licensing for large organizations needing audit-proof, TÜV-certified compliance.</div>
         </div>
-        <div class="about-visual">
-          <div class="about-stat-row">
-            <div class="about-stat">
-              <div class="about-stat-num">10K+</div>
-              <div class="about-stat-label">Customers served</div>
-            </div>
-            <div class="about-stat">
-              <div class="about-stat-num">6yrs</div>
-              <div class="about-stat-label">In business</div>
-            </div>
-          </div>
-          <div class="about-stat-row">
-            <div class="about-stat">
-              <div class="about-stat-num">99.8%</div>
-              <div class="about-stat-label">Success rate</div>
-            </div>
-            <div class="about-stat">
-              <div class="about-stat-num">⚡5min</div>
-              <div class="about-stat-label">Avg delivery</div>
-            </div>
-          </div>
-          <div class="trust-badges">
-            <div class="trust-badge"><span class="trust-badge-icon">💳</span>Razorpay<br>Secured</div>
-            <div class="trust-badge"><span class="trust-badge-icon">🔒</span>SSL<br>Encrypted</div>
-            <div class="trust-badge"><span class="trust-badge-icon">✅</span>Genuine<br>Keys Only</div>
-            <div class="trust-badge"><span class="trust-badge-icon">🔄</span>Replacement<br>Warranty</div>
-          </div>
+        <div class="advantage-card" style="border:1px solid var(--border);border-radius:8px">
+          <div class="advantage-icon">🏬</div>
+          <div class="advantage-title">Small Business</div>
+          <div class="advantage-desc">Microsoft 365 Business plans and Office perpetual licenses perfectly sized for SMBs and growing teams.</div>
+        </div>
+        <div class="advantage-card" style="border:1px solid var(--border);border-radius:8px">
+          <div class="advantage-icon">🎓</div>
+          <div class="advantage-title">Education</div>
+          <div class="advantage-desc">Affordable Office and Microsoft 365 licenses for schools, colleges, and universities with educational pricing.</div>
+        </div>
+        <div class="advantage-card" style="border:1px solid var(--border);border-radius:8px">
+          <div class="advantage-icon">👤</div>
+          <div class="advantage-title">Individual / Home</div>
+          <div class="advantage-desc">Genuine Office 2021/2024 perpetual licenses for personal use — one-time purchase, lifetime validity.</div>
+        </div>
+        <div class="advantage-card" style="border:1px solid var(--border);border-radius:8px">
+          <div class="advantage-icon">💻</div>
+          <div class="advantage-title">IT Resellers</div>
+          <div class="advantage-desc">Volume purchase pricing for IT resellers and system integrators. Contact us for bulk pricing.</div>
+        </div>
+        <div class="advantage-card" style="border:1px solid var(--border);border-radius:8px">
+          <div class="advantage-icon">☁️</div>
+          <div class="advantage-title">Cloud Migration</div>
+          <div class="advantage-desc">Transition from perpetual to SaaS with Microsoft 365 and Office 365 subscription plans.</div>
         </div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- ─── PAGE: CONTACT ─────────────────────────────────────────────────── -->
+<!-- ── PAGE: CONTACT ──────────────────────────────────────────────────── -->
 <div id="page-contact" class="page">
-  <section style="padding-top: 8rem;">
+  <div class="about-hero">
+    <h1>Contact Us</h1>
+    <p>We're here to help with licensing enquiries, pricing, and support</p>
+  </div>
+  <section>
     <div class="container">
-      <span class="section-tag">Get in touch</span>
-      <h2>We're here to help</h2>
-      <p class="section-sub">Questions about a product, activation help, or anything else — reach us instantly.</p>
       <div class="contact-grid">
-        <div class="contact-info">
-          <div class="contact-item" data-wa="true">
-            <div class="contact-item-icon wa">💬</div>
-            <div>
-              <div class="contact-item-title">WhatsApp (Fastest)</div>
-              <div class="contact-item-val">+91 72596 71242 — Available 24/7</div>
-              <div style="font-size:0.8rem; color:var(--accent3); margin-top:4px;">Click to chat →</div>
+        <div class="contact-info-card">
+          <h3>Get in Touch</h3>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📧</div>
+            <div class="contact-detail-text">
+              <strong>Email</strong>
+              <span>sales@buy-license.com</span>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="contact-item-icon email">📧</div>
-            <div>
-              <div class="contact-item-title">Email Support</div>
-              <div class="contact-item-val">sales@buy-license.com</div>
-              <div style="font-size:0.8rem; color:var(--muted); margin-top:4px;">Response within 2 hours</div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📞</div>
+            <div class="contact-detail-text">
+              <strong>WhatsApp / Phone</strong>
+              <span>+91 72596 71242</span>
             </div>
           </div>
-          <div style="padding: 1.25rem; background: rgba(108,92,231,0.08); border: 1px solid rgba(108,92,231,0.2); border-radius: 14px;">
-            <div style="font-weight:600; margin-bottom:0.5rem;">🕐 Support Hours</div>
-            <div style="color:var(--muted); font-size:0.875rem; line-height:1.8;">
-              WhatsApp: 24 hours, 7 days<br>
-              Email: 9 AM – 9 PM, Mon–Sat<br>
-              Avg response: under 10 minutes
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div class="contact-detail-text">
+              <strong>Address</strong>
+              <span>Resofto Technologies, WeWork Vaishnavi Signature, No. 78/9, Outer Ring Road, Bellandur Village, Bengaluru, Karnataka 560103</span>
             </div>
           </div>
-          <div style="padding: 1.25rem; background: var(--card); border: 1px solid var(--border); border-radius: 14px;">
-            <div style="font-weight:600; margin-bottom:0.75rem;">🔑 Already bought a key?</div>
-            <div style="color:var(--muted); font-size:0.875rem; margin-bottom:1rem;">Having trouble activating? Send us your order details on WhatsApp for instant help.</div>
-            <button class="btn-primary" style="padding:0.6rem 1.25rem; font-size:0.88rem;" onclick="document.getElementById('wa-float').click()">Chat on WhatsApp →</button>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🕐</div>
+            <div class="contact-detail-text">
+              <strong>Business Hours</strong>
+              <span>Mon–Sat: 9AM–9PM | WhatsApp 24/7</span>
+            </div>
           </div>
+          <button class="btn-cart" style="margin-top:16px" onclick="window.open('https://wa.me/917259671242?text=Hi! I would like to enquire about Microsoft software licenses.','_blank')">
+            💬 Chat on WhatsApp
+          </button>
         </div>
-        <div class="contact-form">
-          <h3>Send us a message</h3>
-          <div id="form-success" class="form-success">
-            ✅ Message sent! We'll get back to you within 2 hours. For faster help, use WhatsApp.
-          </div>
+        <div class="contact-form-card">
+          <h3>Send an Enquiry</h3>
+          <div class="form-success" id="form-success">✅ Thank you! We'll get back to you within 2 hours. For faster help, WhatsApp us.</div>
           <form id="contact-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="c-name">Your name</label>
-                <input type="text" id="c-name" placeholder="Rajesh Kumar" required />
-              </div>
-              <div class="form-group">
-                <label for="c-email">Email address</label>
-                <input type="email" id="c-email" placeholder="you@email.com" required />
-              </div>
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" id="c-name" placeholder="Full name" required/>
             </div>
             <div class="form-group">
-              <label for="c-product">Product you're interested in</label>
+              <label>Email Address</label>
+              <input type="email" id="c-email" placeholder="your@email.com" required/>
+            </div>
+            <div class="form-group">
+              <label>Phone / WhatsApp</label>
+              <input type="tel" id="c-phone" placeholder="+91 XXXXX XXXXX"/>
+            </div>
+            <div class="form-group">
+              <label>Product / License Enquiry</label>
               <select id="c-product">
-                <option value="">Select a product</option>
-                <option>Windows 11 Pro</option>
-                <option>Windows 10 Pro</option>
-                <option>Microsoft Office 2021</option>
-                <option>Office 365 (1 Year)</option>
-                <option>Kaspersky Total Security</option>
-                <option>Norton 360 Deluxe</option>
-                <option>Other / General query</option>
+                <option value="">Select a product category</option>
+                <option>Microsoft Office (Perpetual)</option>
+                <option>Microsoft 365</option>
+                <option>Office 365</option>
+                <option>Windows 365</option>
+                <option>Windows Server</option>
+                <option>Exchange Server</option>
+                <option>SQL Server</option>
+                <option>Client Access Licences</option>
+                <option>Other / General Enquiry</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="c-message">Message</label>
-              <textarea id="c-message" placeholder="Tell us what you need…" required></textarea>
+              <label>Message</label>
+              <textarea id="c-message" placeholder="Please describe your licensing requirements…" required></textarea>
             </div>
-            <button type="submit" class="btn-submit">Send Message →</button>
+            <button type="submit" class="btn-submit">Send Enquiry →</button>
           </form>
         </div>
       </div>
@@ -309,90 +417,71 @@
   </section>
 </div>
 
-<!-- ─── FOOTER ────────────────────────────────────────────────────────── -->
+<!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="nav-logo">Buy<span>License</span></div>
-        <p>Genuine software license keys at the best prices in India. Instant delivery, lifetime validity, 24/7 WhatsApp support.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Products</h4>
-        <a href="#" data-page="products">Windows Keys</a>
-        <a href="#" data-page="products">Office Keys</a>
-        <a href="#" data-page="products">Antivirus</a>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="#" data-page="about">About Us</a>
-        <a href="#" data-page="contact">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Support</h4>
-        <a href="#" data-page="contact">Activation Help</a>
-        <a href="#" data-page="contact">Replacement Policy</a>
-        <a href="#" data-page="contact">WhatsApp Chat</a>
-      </div>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="logo-text">Buy<span style="color:#FF6B00">License</span></span>
+      <p>Resofto Technologies — Trusted reseller of genuine Microsoft software licenses. TÜV-certified, audit-proof, instant delivery.</p>
+      <p style="font-size:12px">WeWork Vaishnavi Signature, No. 78/9, Outer Ring Road, Bellandur Village, Bengaluru, Karnataka 560103</p>
     </div>
-    <div class="footer-bottom">
-      <p>© 2024 BuyLicense. All rights reserved. Genuine software, best prices.</p>
-      <p style="color:var(--muted); font-size:0.78rem;">Payments secured by Razorpay 🔒</p>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#" data-page="home">Home</a>
+      <a href="#" data-page="about">About Us</a>
+      <a href="#" data-page="products">Products</a>
+      <a href="#" data-page="usecases">Use Cases</a>
+      <a href="#" data-page="contact">Contact Us</a>
     </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <a href="#" data-page="products">Microsoft Office</a>
+      <a href="#" data-page="products">Microsoft 365</a>
+      <a href="#" data-page="products">Office 365</a>
+      <a href="#" data-page="products">Windows 365</a>
+      <a href="#" data-page="products">Windows Server</a>
+      <a href="#" data-page="products">SQL Server</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <div class="footer-contact-item">📧 sales@buy-license.com</div>
+      <div class="footer-contact-item">📞 +91 72596 71242</div>
+      <div class="footer-contact-item">💬 WhatsApp 24/7</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright © 2025 BuyLicense — Resofto Technologies. All Rights Reserved. &nbsp;|&nbsp; <a href="#" style="color:#666">Privacy Policy</a> &nbsp;|&nbsp; <a href="#" style="color:#666">Terms & Conditions</a></p>
   </div>
 </footer>
 
-<!-- ─── WHATSAPP FLOAT ─────────────────────────────────────────────────── -->
-<a id="wa-float" class="wa-float" href="#" aria-label="Chat on WhatsApp">
-  <span class="wa-tooltip">Chat with us</span>
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.855L.057 23.272a.75.75 0 0 0 .92.921l5.356-1.463A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.502-5.228-1.381l-.374-.217-3.878 1.058 1.084-3.965-.234-.385A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
-  </svg>
-</a>
-
-<!-- ─── PAYMENT MODAL ──────────────────────────────────────────────────── -->
-<div id="payment-modal" class="modal-overlay">
-  <div class="modal">
-    <div class="modal-header">
-      <span class="modal-title">Complete your purchase</span>
-      <span class="modal-close" id="modal-close">✕</span>
-    </div>
-    <div class="modal-product-summary">
-      <div>
-        <div style="font-size:0.78rem; color:var(--muted); margin-bottom:2px;">You're buying</div>
-        <div class="modal-product-name" id="modal-product-name"></div>
-      </div>
-      <div class="modal-product-price" id="modal-product-price"></div>
-    </div>
-    <div style="font-size:0.82rem; color:var(--muted); margin-bottom:0.75rem;">Select payment method</div>
-    <div class="payment-methods">
-      <div class="payment-method active" data-method="upi">
-        <span class="payment-method-icon">📱</span>UPI / GPay
-      </div>
-      <div class="payment-method" data-method="card">
-        <span class="payment-method-icon">💳</span>Card
-      </div>
-      <div class="payment-method" data-method="netbanking">
-        <span class="payment-method-icon">🏦</span>Net Banking
-      </div>
-    </div>
-    <div class="form-group">
-      <label>Email (key will be sent here)</label>
-      <input type="email" placeholder="your@email.com" />
-    </div>
-    <button class="btn-pay" id="modal-pay-btn">Pay Securely →</button>
-    <div class="payment-secure">🔒 Secured by Razorpay · 256-bit SSL encryption</div>
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<div class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header">
+    <h3>🛒 Enquiry Cart</h3>
+    <span class="cart-close" id="cart-close">×</span>
+  </div>
+  <div id="cart-empty" class="cart-empty">
+    <div class="cart-empty-icon">🛒</div>
+    <p>Your cart is empty</p>
+    <p style="font-size:12px;margin-top:8px">Add products and enquire via WhatsApp for pricing</p>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer" id="cart-footer" style="display:none">
+    <div class="cart-count-summary" id="cart-count-summary"></div>
+    <button class="btn-enquire" id="btn-enquire">💬 Enquire via WhatsApp</button>
+    <button class="btn-clear-cart" id="btn-clear-cart">Clear Cart</button>
   </div>
 </div>
 
-<!-- ─── TOAST ─────────────────────────────────────────────────────────── -->
-<div id="toast" class="toast"></div>
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" id="wa-float" href="#" aria-label="WhatsApp">
+  <span class="wa-tooltip">Chat with us</span>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.855L.057 23.272a.75.75 0 0 0 .92.921l5.356-1.463A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.502-5.228-1.381l-.374-.217-3.878 1.058 1.084-3.965-.234-.385A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
 
-<!-- Filter button active style -->
-<style>
-  .active-filter { background: var(--accent) !important; color: #fff !important; border-color: var(--accent) !important; }
-</style>
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
 
 <script src="js/main.js"></script>
 </body>

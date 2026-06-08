@@ -1,211 +1,304 @@
-// ─── CONFIG ─────────────────────────────────────────────────────────────
-
-  const CONFIG = {
+// ── CONFIG ──────────────────────────────────────────────────────────────
+const CONFIG = {
   whatsapp: '917259671242',
-  whatsappMsg: 'Hi! I want to buy a license key. Please help me.',
   email: 'sales@buy-license.com',
-  razorpay_key: 'rzp_test_XXXXXXXXXX',
-  business_name: 'BuyLicense',
-  currency: 'INR',
+  business: 'BuyLicense',
 };
 
-// ─── PRODUCTS ───────────────────────────────────────────────────────────
+// ── ALL PRODUCTS ─────────────────────────────────────────────────────────
 const PRODUCTS = [
-  { id: 1, name: 'Windows 11 Pro', desc: 'Genuine lifetime activation key for Windows 11 Professional. Instant delivery after payment.', price: 1299, icon: '🪟', badge: 'Bestseller', category: 'windows' },
-  { id: 2, name: 'Microsoft Office 2021', desc: 'Full Office suite — Word, Excel, PowerPoint, Outlook. One-time purchase, lifetime use.', price: 1999, icon: '📄', badge: null, category: 'office' },
-  { id: 3, name: 'Windows 10 Pro', desc: 'Genuine activation key for Windows 10 Professional. Works on any PC.', price: 899, icon: '💻', badge: null, category: 'windows' },
-  { id: 4, name: 'Office 365 (1 Year)', desc: 'Microsoft 365 subscription — 1 year for 5 devices including mobile and cloud storage.', price: 2499, icon: '☁️', badge: 'Popular', category: 'office' },
-  { id: 5, name: 'Kaspersky Total Security', desc: 'Complete antivirus protection for 1 year, 3 devices. Real-time threat protection.', price: 699, icon: '🛡️', badge: null, category: 'antivirus' },
-  { id: 6, name: 'Norton 360 Deluxe', desc: 'Premium antivirus + VPN + Dark web monitoring. 1 year, 5 devices.', price: 799, icon: '🔒', badge: 'New', category: 'antivirus' },
+  // Office perpetual
+  {id:1,name:'Office 2024 Standard LTSC',cat:'office',icon:'📄',badge:'New'},
+  {id:2,name:'Office 2024 Professional Plus LTSC',cat:'office',icon:'📄',badge:null},
+  {id:3,name:'Office 2021 Standard LTSC',cat:'office',icon:'📄',badge:null},
+  {id:4,name:'Office 2021 Professional Plus LTSC',cat:'office',icon:'📄',badge:null},
+  {id:5,name:'Office 2021 Standard MAC',cat:'office',icon:'📄',badge:null},
+  {id:6,name:'Office 2019 Standard',cat:'office',icon:'📄',badge:null},
+  {id:7,name:'Office 2019 Professional Plus',cat:'office',icon:'📄',badge:null},
+  {id:8,name:'Office 2019 Standard for Mac',cat:'office',icon:'📄',badge:null},
+  {id:9,name:'Office 2016 Standard',cat:'office',icon:'📄',badge:null},
+  {id:10,name:'Office 2016 Professional Plus',cat:'office',icon:'📄',badge:null},
+  {id:11,name:'Office 2016 Standard for Mac',cat:'office',icon:'📄',badge:null},
+  {id:12,name:'Microsoft Office 2024 Standard Mac',cat:'office',icon:'📄',badge:null},
+  // Outlook
+  {id:13,name:'Outlook 2024 LTSC',cat:'outlook',icon:'📧',badge:null},
+  {id:14,name:'Outlook 2021 LTSC',cat:'outlook',icon:'📧',badge:null},
+  {id:15,name:'Outlook 2019',cat:'outlook',icon:'📧',badge:null},
+  {id:16,name:'Outlook 2016',cat:'outlook',icon:'📧',badge:null},
+  // Access
+  {id:17,name:'Access 2024 LTSC',cat:'access',icon:'🗄️',badge:null},
+  {id:18,name:'Access 2021 LTSC',cat:'access',icon:'🗄️',badge:null},
+  {id:19,name:'Access 2019',cat:'access',icon:'🗄️',badge:null},
+  {id:20,name:'Access 2016',cat:'access',icon:'🗄️',badge:null},
+  // Microsoft 365 Business
+  {id:21,name:'Microsoft 365 Business Basic',cat:'m365',icon:'☁️',badge:null},
+  {id:22,name:'Microsoft 365 Business Standard',cat:'m365',icon:'☁️',badge:'Popular'},
+  {id:23,name:'Microsoft 365 Business Premium',cat:'m365',icon:'☁️',badge:null},
+  {id:24,name:'Microsoft 365 Apps for Business',cat:'m365',icon:'☁️',badge:null},
+  // Microsoft 365 Enterprise
+  {id:25,name:'Microsoft 365 E3',cat:'m365',icon:'☁️',badge:null},
+  {id:26,name:'Microsoft 365 E5',cat:'m365',icon:'☁️',badge:null},
+  {id:27,name:'Microsoft 365 F3',cat:'m365',icon:'☁️',badge:null},
+  // Office 365
+  {id:28,name:'Office 365 Business Basic',cat:'o365',icon:'🌐',badge:null},
+  {id:29,name:'Office 365 Business Standard',cat:'o365',icon:'🌐',badge:null},
+  {id:30,name:'Office 365 Apps for Business',cat:'o365',icon:'🌐',badge:null},
+  {id:31,name:'Office 365 Apps for Enterprise',cat:'o365',icon:'🌐',badge:null},
+  {id:32,name:'Office 365 E1',cat:'o365',icon:'🌐',badge:null},
+  {id:33,name:'Office 365 E3',cat:'o365',icon:'🌐',badge:null},
+  {id:34,name:'Office 365 E5',cat:'o365',icon:'🌐',badge:null},
+  // Windows 365
+  {id:35,name:'Windows 365 Business',cat:'w365',icon:'🪟',badge:null},
+  {id:36,name:'Windows 365 Enterprise',cat:'w365',icon:'🪟',badge:null},
+  {id:37,name:'Windows 365 Frontline',cat:'w365',icon:'🪟',badge:null},
+  // Windows Server
+  {id:38,name:'Windows Server 2022 Standard',cat:'server',icon:'🖥️',badge:null},
+  {id:39,name:'Windows Server 2022 Datacenter',cat:'server',icon:'🖥️',badge:null},
+  {id:40,name:'Windows Server 2019 Standard',cat:'server',icon:'🖥️',badge:null},
+  {id:41,name:'Windows Server 2019 Datacenter',cat:'server',icon:'🖥️',badge:null},
+  {id:42,name:'Windows Server 2025 RDS User CAL',cat:'server',icon:'🖥️',badge:'New'},
+  // Exchange Server
+  {id:43,name:'Exchange Server 2019 Standard',cat:'exchange',icon:'📨',badge:null},
+  {id:44,name:'Exchange Server 2019 Enterprise',cat:'exchange',icon:'📨',badge:null},
+  {id:45,name:'Exchange Server 2016 Standard',cat:'exchange',icon:'📨',badge:null},
+  // SQL Server
+  {id:46,name:'SQL Server 2022 Standard',cat:'sql',icon:'🗃️',badge:null},
+  {id:47,name:'SQL Server 2022 Enterprise',cat:'sql',icon:'🗃️',badge:null},
+  {id:48,name:'SQL Server 2019 Standard',cat:'sql',icon:'🗃️',badge:null},
+  // SharePoint
+  {id:49,name:'SharePoint Server 2019',cat:'sharepoint',icon:'📁',badge:null},
+  {id:50,name:'SharePoint Server 2016',cat:'sharepoint',icon:'📁',badge:null},
+  // CALs
+  {id:51,name:'Windows Server 2022 User CAL',cat:'cal',icon:'🔑',badge:null},
+  {id:52,name:'Exchange Server 2019 Standard CAL',cat:'cal',icon:'🔑',badge:null},
+  {id:53,name:'SharePoint Server 2019 Standard CAL',cat:'cal',icon:'🔑',badge:null},
 ];
 
-// ─── ROUTER ─────────────────────────────────────────────────────────────
-const pages = document.querySelectorAll('.page');
-const navLinks = document.querySelectorAll('[data-page]');
+// ── CART ────────────────────────────────────────────────────────────────
+let cart = [];
 
-function showPage(pageId) {
-  pages.forEach(p => p.classList.remove('active'));
-  const target = document.getElementById('page-' + pageId);
-  if (target) { target.classList.add('active', 'fade-in'); }
-  navLinks.forEach(l => {
-    l.classList.toggle('active', l.dataset.page === pageId);
-  });
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  document.querySelector('.nav-links').classList.remove('open');
-}
-
-navLinks.forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    showPage(link.dataset.page);
-  });
-});
-
-// ─── HAMBURGER ──────────────────────────────────────────────────────────
-document.querySelector('.hamburger').addEventListener('click', () => {
-  document.querySelector('.nav-links').classList.toggle('open');
-});
-
-// ─── RENDER PRODUCTS ────────────────────────────────────────────────────
-function renderProducts(filter = 'all') {
-  const grid = document.getElementById('products-grid');
-  if (!grid) return;
-  const filtered = filter === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.category === filter);
-  grid.innerHTML = filtered.map(p => `
-    <div class="product-card fade-in">
-      ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
-      <div class="product-icon">${p.icon}</div>
-      <div class="product-name">${p.name}</div>
-      <div class="product-desc">${p.desc}</div>
-      <div class="product-price">₹${p.price.toLocaleString('en-IN')} <span>one-time</span></div>
-      <button class="btn-buy" onclick="openPayment(${p.id})">Buy Now — ₹${p.price.toLocaleString('en-IN')}</button>
-    </div>
-  `).join('');
-}
-
-// Filter buttons
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active-filter'));
-    btn.classList.add('active-filter');
-    renderProducts(btn.dataset.filter);
-  });
-});
-
-renderProducts();
-
-// ─── PAYMENT MODAL ──────────────────────────────────────────────────────
-let currentProduct = null;
-
-function openPayment(productId) {
-  currentProduct = PRODUCTS.find(p => p.id === productId);
-  if (!currentProduct) return;
-  document.getElementById('modal-product-name').textContent = currentProduct.name;
-  document.getElementById('modal-product-price').textContent = `₹${currentProduct.price.toLocaleString('en-IN')}`;
-  document.getElementById('modal-pay-btn').textContent = `Pay ₹${currentProduct.price.toLocaleString('en-IN')} Securely`;
-  document.getElementById('payment-modal').classList.add('open');
-}
-
-document.getElementById('modal-close').addEventListener('click', () => {
-  document.getElementById('payment-modal').classList.remove('open');
-});
-document.getElementById('payment-modal').addEventListener('click', e => {
-  if (e.target === e.currentTarget) e.currentTarget.classList.remove('open');
-});
-
-// Payment method toggle
-document.querySelectorAll('.payment-method').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.payment-method').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-  });
-});
-
-// Pay button — Razorpay integration
-document.getElementById('modal-pay-btn').addEventListener('click', () => {
-  if (!currentProduct) return;
-
-  // ── Razorpay checkout ──────────────────────────────────────────────
-  // Uncomment below and remove the simulation once you have a Razorpay account:
-  /*
-  const options = {
-    key: CONFIG.razorpay_key,
-    amount: currentProduct.price * 100, // in paise
-    currency: CONFIG.currency,
-    name: CONFIG.business_name,
-    description: currentProduct.name,
-    handler: function(response) {
-      document.getElementById('payment-modal').classList.remove('open');
-      showToast('✓ Payment successful! License key sent to your email.', 'success');
-      // Send license key via your backend/email here
-    },
-    prefill: { name: '', email: '', contact: '' },
-    theme: { color: '#6C5CE7' }
-  };
-  const rzp = new Razorpay(options);
-  rzp.open();
-  */
-
-  // ── Demo simulation (remove when Razorpay is live) ────────────────
-  document.getElementById('payment-modal').classList.remove('open');
-  showToast('✓ Payment successful! License key sent to your email.', 'success');
-});
-
-// ─── WHATSAPP ───────────────────────────────────────────────────────────
-document.getElementById('wa-float').addEventListener('click', () => {
-  const msg = encodeURIComponent(CONFIG.whatsappMsg);
-  window.open(`https://wa.me/${CONFIG.whatsapp}?text=${msg}`, '_blank');
-});
-
-function waProduct(productId) {
-  const p = PRODUCTS.find(x => x.id === productId);
+function addToCart(id) {
+  const p = PRODUCTS.find(x => x.id === id);
   if (!p) return;
-  const msg = encodeURIComponent(`Hi! I want to buy "${p.name}" (₹${p.price}). Please assist me.`);
-  window.open(`https://wa.me/${CONFIG.whatsapp}?text=${msg}`, '_blank');
+  if (cart.find(x => x.id === id)) {
+    showToast('Already in cart!', '');
+    return;
+  }
+  cart.push(p);
+  updateCartUI();
+  showToast('✓ Added to cart — ' + p.name, 'success');
+  const btn = document.querySelector(`[data-add="${id}"]`);
+  if (btn) { btn.textContent = '✓ Added'; btn.classList.add('added'); setTimeout(() => { btn.innerHTML = '🛒 Add to Cart'; btn.classList.remove('added'); }, 2000); }
 }
 
-// ─── CONTACT FORM ───────────────────────────────────────────────────────
+function removeFromCart(id) {
+  cart = cart.filter(x => x.id !== id);
+  updateCartUI();
+}
+
+function clearCart() { cart = []; updateCartUI(); }
+
+function updateCartUI() {
+  const count = cart.length;
+  document.querySelectorAll('.cart-count').forEach(el => el.textContent = count);
+  const itemsEl = document.getElementById('cart-items');
+  const emptyEl = document.getElementById('cart-empty');
+  const footerEl = document.getElementById('cart-footer');
+  if (!itemsEl) return;
+  if (count === 0) {
+    emptyEl.style.display = 'block';
+    itemsEl.innerHTML = '';
+    footerEl.style.display = 'none';
+  } else {
+    emptyEl.style.display = 'none';
+    footerEl.style.display = 'block';
+    itemsEl.innerHTML = cart.map(p => `
+      <div class="cart-item">
+        <div class="cart-item-icon">${p.icon}</div>
+        <div style="flex:1">
+          <div class="cart-item-name">${p.name}</div>
+          <div class="cart-item-cat">${getCatLabel(p.cat)}</div>
+        </div>
+        <span class="cart-item-remove" onclick="removeFromCart(${p.id})" title="Remove">×</span>
+      </div>
+    `).join('');
+    document.getElementById('cart-count-summary').textContent = `${count} product${count > 1 ? 's' : ''} in enquiry list`;
+  }
+}
+
+function getCatLabel(cat) {
+  const map = {office:'MS Office',outlook:'Outlook',access:'Access',m365:'Microsoft 365',o365:'Office 365',w365:'Windows 365',server:'Windows Server',exchange:'Exchange Server',sql:'SQL Server',sharepoint:'SharePoint',cal:'Client Access Licences'};
+  return map[cat] || cat;
+}
+
+// ── CART OPEN/CLOSE ──────────────────────────────────────────────────────
+document.getElementById('cart-btn').addEventListener('click', () => {
+  document.getElementById('cart-sidebar').classList.add('open');
+  document.getElementById('cart-overlay').classList.add('open');
+});
+document.getElementById('cart-close').addEventListener('click', closeCart);
+document.getElementById('cart-overlay').addEventListener('click', closeCart);
+function closeCart() {
+  document.getElementById('cart-sidebar').classList.remove('open');
+  document.getElementById('cart-overlay').classList.remove('open');
+}
+
+// ── WHATSAPP ENQUIRY ─────────────────────────────────────────────────────
+document.getElementById('btn-enquire').addEventListener('click', () => {
+  if (cart.length === 0) return;
+  const list = cart.map((p, i) => `${i + 1}. ${p.name}`).join('\n');
+  const msg = encodeURIComponent(`Hi! I would like to enquire about the following products:\n\n${list}\n\nPlease share pricing and availability.`);
+  window.open(`https://wa.me/${CONFIG.whatsapp}?text=${msg}`, '_blank');
+});
+
+document.getElementById('btn-clear-cart').addEventListener('click', clearCart);
+
+// ── WA FLOAT ────────────────────────────────────────────────────────────
+document.getElementById('wa-float').addEventListener('click', () => {
+  const msg = encodeURIComponent('Hi! I would like to enquire about Microsoft software licenses.');
+  window.open(`https://wa.me/${CONFIG.whatsapp}?text=${msg}`, '_blank');
+});
+
+// ── ROUTER ──────────────────────────────────────────────────────────────
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const el = document.getElementById('page-' + id);
+  if (el) el.classList.add('active', 'fade-in');
+  document.querySelectorAll('[data-page]').forEach(l => l.classList.toggle('nav-active', l.dataset.page === id));
+  document.querySelectorAll('.nav-inner>ul').forEach(u => u.classList.remove('open'));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (id === 'products') renderProductsPage('all');
+  if (id === 'home') renderHomeSections();
+}
+
+document.querySelectorAll('[data-page]').forEach(l => {
+  l.addEventListener('click', e => { e.preventDefault(); showPage(l.dataset.page); });
+});
+
+// Hamburger
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.querySelector('.nav-inner>ul').classList.toggle('open');
+});
+
+// ── RENDER HOME PRODUCT SECTIONS ─────────────────────────────────────────
+function renderHomeSections() {
+  renderProductSection('hot-deals-grid', ['office', 'o365', 'm365'], 8);
+  renderProductSection('trending-grid', ['w365', 'm365'], 8);
+  renderProductSection('popular-grid', 'all', 8, 'popular-tab');
+}
+
+function renderProductSection(gridId, cats, limit, tabId) {
+  const grid = document.getElementById(gridId);
+  if (!grid) return;
+  let products = cats === 'all' ? PRODUCTS : PRODUCTS.filter(p => cats.includes(p.cat));
+  products = products.slice(0, limit);
+  grid.innerHTML = products.map(p => productCardHTML(p)).join('');
+}
+
+function productCardHTML(p) {
+  return `<div class="product-card">
+    ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
+    <div class="product-img">${p.icon}</div>
+    <div class="product-body">
+      <div class="product-category">${getCatLabel(p.cat)}</div>
+      <div class="product-name">${p.name}</div>
+      <button class="btn-cart" data-add="${p.id}" onclick="addToCart(${p.id})">🛒 Add to Cart</button>
+    </div>
+  </div>`;
+}
+
+// ── PRODUCTS PAGE ────────────────────────────────────────────────────────
+function renderProductsPage(filter) {
+  const grid = document.getElementById('all-products-grid');
+  if (!grid) return;
+  const products = filter === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.cat === filter);
+  grid.innerHTML = products.map(p => productCardHTML(p)).join('');
+}
+
+document.querySelectorAll('.cat-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderProductsPage(btn.dataset.cat);
+  });
+});
+
+// Popular tabs
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.cat;
+    const grid = document.getElementById('popular-grid');
+    const products = cat === 'all' ? PRODUCTS.slice(0, 8) : PRODUCTS.filter(p => p.cat === cat).slice(0, 8);
+    grid.innerHTML = products.map(p => productCardHTML(p)).join('');
+  });
+});
+
+// ── HERO SLIDER ──────────────────────────────────────────────────────────
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.hero-dot');
+let current = 0;
+function goSlide(n) {
+  slides.forEach(s => s.classList.remove('active'));
+  dots.forEach(d => d.classList.remove('active'));
+  current = (n + slides.length) % slides.length;
+  if (slides[current]) slides[current].classList.add('active');
+  if (dots[current]) dots[current].classList.add('active');
+}
+if (slides.length) {
+  goSlide(0);
+  dots.forEach((d, i) => d.addEventListener('click', () => goSlide(i)));
+  setInterval(() => goSlide(current + 1), 5000);
+}
+
+// ── SEARCH ───────────────────────────────────────────────────────────────
+document.getElementById('search-btn').addEventListener('click', doSearch);
+document.getElementById('search-input').addEventListener('keypress', e => { if (e.key === 'Enter') doSearch(); });
+function doSearch() {
+  const q = document.getElementById('search-input').value.toLowerCase().trim();
+  if (!q) return;
+  showPage('products');
+  setTimeout(() => {
+    const results = PRODUCTS.filter(p => p.name.toLowerCase().includes(q));
+    const grid = document.getElementById('all-products-grid');
+    if (!grid) return;
+    if (results.length === 0) { grid.innerHTML = `<p style="grid-column:1/-1;text-align:center;color:var(--muted);padding:40px">No products found for "${q}"</p>`; return; }
+    grid.innerHTML = results.map(p => productCardHTML(p)).join('');
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector('.cat-btn[data-cat="all"]').classList.add('active');
+  }, 100);
+}
+
+// ── CONTACT FORM ────────────────────────────────────────────────────────
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = contactForm.querySelector('.btn-submit');
-    btn.textContent = 'Sending…';
-    btn.disabled = true;
-
-    const data = {
-      name: document.getElementById('c-name').value,
-      email: document.getElementById('c-email').value,
-      product: document.getElementById('c-product').value,
-      message: document.getElementById('c-message').value,
-    };
-
-    // ── Formspree integration (replace YOUR_FORM_ID) ──────────────────
-    // Sign up free at formspree.io, create a form, paste your form ID below:
-    /*
-    try {
-      const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(data)
-      });
-      if (res.ok) {
-        document.getElementById('form-success').style.display = 'block';
-        contactForm.style.display = 'none';
-      }
-    } catch(err) { showToast('Error sending. Try WhatsApp instead.', ''); }
-    */
-
-    // ── Demo simulation ───────────────────────────────────────────────
+    btn.textContent = 'Sending…'; btn.disabled = true;
+    // Replace YOUR_FORM_ID with your Formspree form ID
+    // const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', { method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body: JSON.stringify({ name: document.getElementById('c-name').value, email: document.getElementById('c-email').value, message: document.getElementById('c-message').value }) });
     setTimeout(() => {
       document.getElementById('form-success').style.display = 'block';
-      contactForm.style.display = 'none';
+      contactForm.reset(); btn.textContent = 'Send Message'; btn.disabled = false;
     }, 900);
   });
 }
 
-// WhatsApp contact shortcuts
-document.querySelectorAll('.contact-item[data-wa]').forEach(el => {
-  el.addEventListener('click', () => {
-    const msg = encodeURIComponent(CONFIG.whatsappMsg);
-    window.open(`https://wa.me/${CONFIG.whatsapp}?text=${msg}`, '_blank');
-  });
-});
-
-// ─── TOAST ──────────────────────────────────────────────────────────────
-function showToast(msg, type = '') {
+// ── TOAST ────────────────────────────────────────────────────────────────
+function showToast(msg, type) {
   const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.className = `toast ${type}`;
+  t.textContent = msg; t.className = `toast ${type}`;
   setTimeout(() => t.classList.add('show'), 10);
-  setTimeout(() => t.classList.remove('show'), 4000);
+  setTimeout(() => t.classList.remove('show'), 3000);
 }
 
-// ─── SCROLL ANIMATIONS ──────────────────────────────────────────────────
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('fade-in'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.product-card, .feature-card, .about-highlight').forEach(el => observer.observe(el));
+// ── MARQUEE DUPLICATE ─────────────────────────────────────────────────────
+const marquee = document.querySelector('.marquee-inner');
+if (marquee) marquee.innerHTML += marquee.innerHTML;
 
-// ─── INIT ────────────────────────────────────────────────────────────────
+// ── INIT ─────────────────────────────────────────────────────────────────
 showPage('home');
+renderHomeSections();
+updateCartUI();
